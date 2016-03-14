@@ -1,9 +1,9 @@
 Linux Server Configuration 2016/03/11
 
 #Access
-- IP adress: 52.27.227.73
+- IP adress: 52.11.173.194
 - SSH port 2200
-- URL: http://ec2-52-27-227-73.us-west-2.compute.amazonaws.com
+- URL: http://ec2-52-11-173-194.us-west-2.compute.amazonaws.com
 
 #Installed software
 - Finger
@@ -13,6 +13,7 @@ Linux Server Configuration 2016/03/11
 - NTP
 - libapache2-mod-wsgi
 - unattended-upgrades
+- libpam-cracklib
 
 #Configurations
 - Updated/Upgraded server
@@ -32,6 +33,7 @@ on port 2200(SSH), 80 (HTTP), and 123(NTP)
 - Hardened system against DDoS attacks using script written by Danny Sheehan
 (see resources)
 - Enabled fail2ban to block repeated ssh attempts
+- setup libpam-cracklib to enforce stronger passwords: minimum 12 characters, 1 Upper, 2 Lowercase, 1 digit, and 1 symbolS
 
 #Resources
 - https://www.ftmon.org/blog/secure-ubuntu-server/
@@ -39,4 +41,4 @@ on port 2200(SSH), 80 (HTTP), and 123(NTP)
 - https://discussions.udacity.com/t/project-5-resources/28343
 - https://github.com/robertavram/Linux-Server-Configuration
 - https://discussions.udacity.com/t/markedly-underwhelming-and-potentially-wrong-resource-list-for-p5/8587
-
+- http://xmodulo.com/set-password-policy-linux.html
